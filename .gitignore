@@ -1,0 +1,7 @@
+.gitignore
+*.sh
+*.bin
+*.o
+*.iso
+*.map
+fs/
