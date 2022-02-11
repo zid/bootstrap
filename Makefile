@@ -29,7 +29,7 @@ boot/boot.bin: $(BOBJ) $(BASMOBJ)
 	ld $(BOBJ) $(BASMOBJ) -melf_i386 -T boot/linker.ld -o $@
 
 src/%.o : src/%.c
-	$(CC) -c -o $@ $^ $(CFLAGS)
+	$(CC) -c -o $@ $^ $(CFLAGS) -Isrc/include/
 
 boot/%.o : boot/%.asm
 	nasm $^ -o $@ -felf32
