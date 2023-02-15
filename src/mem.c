@@ -17,7 +17,7 @@ static u64 early_palloc(void)
 	return page;
 }
 
-static u64 *page_table(u32 p3, u32 p2, u32 p1)
+static u64 *page_table(u64 p3, u64 p2, u64 p1)
 {
 	return (u64 *)(RECURSE_PML4 | (p3 << 30) | (p2 << 21) | (p1 << 12));
 }
